@@ -16,13 +16,20 @@
                            ess
                            org))
 
-(load-theme 'solarized-dark t)
-(provide 'custom)
-
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 
 ;; Add smartparens
 (add-hook 'global-init-hook 'smartparens-mode) 
+
+;; Load solarized dark theme
+(load-theme 'solarized-dark t)
+
+;; Activate ESS 
+(require 'ess-site)
+
+
+(provide 'custom)
+
 
 ;;; custom.el ends here
