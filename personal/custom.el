@@ -19,4 +19,6 @@
 (load-theme 'solarized-dark t)
 (provide 'custom)
 
+;; Disable whitespace mode in org mode
+(add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 ;;; custom.el ends here
