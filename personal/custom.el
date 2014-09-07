@@ -21,4 +21,8 @@
 
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
+
+;; Add smartparens
+(add-hook 'global-init-hook 'smartparens-mode) 
+
 ;;; custom.el ends here
