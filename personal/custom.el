@@ -20,7 +20,10 @@
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 
 ;; Add smartparens
-(add-hook 'global-init-hook 'smartparens-mode) 
+(smartparens-global-mode t) 
+(sp-local-pair 'org-mode "~" "~")
+(sp-local-pair 'org-mode "/" "/")
+(sp-local-pair 'org-mode "*" "*")
 
 ;; Load solarized dark theme
 (load-theme 'solarized-dark t)
