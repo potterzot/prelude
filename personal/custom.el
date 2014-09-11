@@ -25,6 +25,9 @@
 (sp-local-pair 'org-mode "/" "/")
 (sp-local-pair 'org-mode "*" "*")
 
+;; Collapse emphasis marks in org mode
+(setq org-hide-emphasis-markers t)
+
 ;; Load solarized dark theme
 (load-theme 'solarized-dark t)
 
