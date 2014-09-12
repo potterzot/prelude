@@ -14,7 +14,8 @@
 (prelude-require-packages '(twittering-mode
                            sublime-themes
                            ess
-                           org))
+                           org
+                           color-theme-solarized))
 
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
