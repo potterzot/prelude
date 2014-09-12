@@ -20,6 +20,9 @@
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 
+;; Disable folding on startup in org
+(setq org-startup-folded nil)
+
 ;; Remap meta and super on Mac
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
