@@ -20,6 +20,10 @@
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 
+;; Remap meta and super on Mac
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier 'super)
+
 ;; Add smartparens
 (smartparens-global-mode t) 
 (sp-local-pair 'org-mode "~" "~")
