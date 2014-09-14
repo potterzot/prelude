@@ -20,6 +20,9 @@
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 
+;; Visual line mode
+(add-hook 'org-mode-hook (lambda () (visual-line-mode 1)))
+
 ;; Disable folding on startup in org
 (setq org-startup-folded nil)
 
