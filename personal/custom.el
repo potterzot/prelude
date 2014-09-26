@@ -39,6 +39,9 @@
 ;; Collapse emphasis marks in org mode
 (setq org-hide-emphasis-markers t)
 
+;; Disable conversion of underscores to arrows
+(add-hook 'ess-mode-hook (lambda () (ess-toggle-underscore nil))) 
+
 ;; Load solarized dark theme
 (load-theme 'solarized-dark t)
 
