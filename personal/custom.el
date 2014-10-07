@@ -15,6 +15,7 @@
                            sublime-themes
                            ess
                            org
+                           floobits
                            color-theme-solarized))
 
 ;; Disable whitespace mode in org mode
