@@ -37,6 +37,9 @@
 (sp-local-pair 'org-mode "/" "/")
 (sp-local-pair 'org-mode "*" "*")
 
+;; Markdown export please
+(setq org-export-backends `(markdown html))
+
 ;; Collapse emphasis marks in org mode
 (setq org-hide-emphasis-markers t)
 
