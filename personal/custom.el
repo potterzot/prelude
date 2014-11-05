@@ -38,6 +38,11 @@
 (setq ess-S-assign-key (kbd "M--"))
 (add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
 
+;; Do the same in R repl
+(add-hook 'ess-R-post-run-hook (lambda () (ess-toggle-underscore nil)))
+(setq ess-S-assign-key (kbd "M--"))
+(add-hook 'ess-R-post-run-hook (lambda () (ess-toggle-S-assign-key t)))
+
 
 ;;;;;;;;;; Helm
 ;; Give me my damn tab completion
