@@ -41,7 +41,7 @@
 (setq mac-option-modifier 'super)
 
 ;; Add smartparens
-(smartparens-global-mode t) 
+(smartparens-global-mode t)
 (sp-local-pair 'org-mode "~" "~")
 (sp-local-pair 'org-mode "/" "/")
 (sp-local-pair 'org-mode "*" "*")
@@ -53,14 +53,17 @@
 (setq org-hide-emphasis-markers t)
 
 ;; Disable conversion of underscores to arrows; map to M-- instead
-(add-hook 'ess-mode-hook (lambda () (ess-toggle-underscore nil))) 
+(add-hook 'ess-mode-hook (lambda () (ess-toggle-underscore nil)))
 (setq ess-S-assign-key (kbd "M--"))
 (add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
 
 ;; Load solarized dark theme
 (load-theme 'solarized-dark t)
 
-;; Activate ESS 
+;; Give me my damn tab completion
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+
+;; Activate ESS
 (require 'ess-site)
 
 
