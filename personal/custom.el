@@ -18,6 +18,15 @@
                            floobits
                            color-theme-solarized))
 
+;; Polymode
+(require 'polymode)
+(require 'poly-R)
+(require 'poly-markdown)
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 
