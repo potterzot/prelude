@@ -18,15 +18,30 @@
                            floobits
                            color-theme-solarized))
 
-;; Polymode
-(require 'polymode)
-(require 'poly-R)
-(require 'poly-markdown)
-(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
-(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
-(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+;; Remap meta and super on Mac
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier 'super)
 
+;; Load solarized dark theme
+(load-theme 'solarized-dark t)
+
+
+;;;;;;;;;; ESS
+;; Activate ESS
+(require 'ess-site)
+
+;; Disable conversion of underscores to arrows; map to M-- instead
+(add-hook 'ess-mode-hook (lambda () (ess-toggle-underscore nil)))
+(setq ess-S-assign-key (kbd "M--"))
+(add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
+
+
+;;;;;;;;;; Helm
+;; Give me my damn tab completion
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+
+
+;;;;;;;;;; Org
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 
@@ -35,10 +50,6 @@
 
 ;; Disable folding on startup in org
 (setq org-startup-folded nil)
-
-;; Remap meta and super on Mac
-(setq mac-command-modifier 'meta)
-(setq mac-option-modifier 'super)
 
 ;; Add smartparens
 (smartparens-global-mode t)
@@ -52,19 +63,16 @@
 ;; Collapse emphasis marks in org mode
 (setq org-hide-emphasis-markers t)
 
-;; Disable conversion of underscores to arrows; map to M-- instead
-(add-hook 'ess-mode-hook (lambda () (ess-toggle-underscore nil)))
-(setq ess-S-assign-key (kbd "M--"))
-(add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
 
-;; Load solarized dark theme
-(load-theme 'solarized-dark t)
+;;;;;;;;;; Polymode
+(require 'polymode)
+(require 'poly-R)
+(require 'poly-markdown)
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
-;; Give me my damn tab completion
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-
-;; Activate ESS
-(require 'ess-site)
 
 
 (provide 'custom)
