@@ -54,6 +54,9 @@
 ;; Disable folding on startup in org
 (setq org-startup-folded nil)
 
+;; Start indented in org
+(setq org-startup-indented t)
+
 ;; Add smartparens
 (smartparens-global-mode t)
 (sp-local-pair 'org-mode "~" "~")
