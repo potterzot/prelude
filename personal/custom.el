@@ -25,6 +25,8 @@
 ;; Load solarized dark theme
 (load-theme 'solarized-dark t)
 
+;; Fill paragraphs at 80 characters
+(setq-default fill-column 80)
 
 ;;;;;;;;;; ESS
 ;; Activate ESS
