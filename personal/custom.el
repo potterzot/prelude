@@ -37,13 +37,8 @@
 
 ;; Disable conversion of underscores to arrows; map to M-- instead
 (add-hook 'ess-mode-hook (lambda () (ess-toggle-underscore nil)))
-(add-hook 'ess-R-post-run-hook (lambda () (ess-toggle-underscore nil)))
-; in ESS mode when editing R scripts:
 (setq ess-S-assign-key (kbd "M--"))
 (add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
-; in R REPL:
-(setq ess-S-assign-key (kbd "M--"))
-(add-hook 'ess-R-post-run-hook (lambda () (ess-toggle-S-assign-key t)))
 
 
 ;;;;;;;;;; Helm
