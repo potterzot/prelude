@@ -45,6 +45,20 @@
 (setq ess-S-assign-key (kbd "M--"))
 (add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
 
+;; Indentation the way I want
+;; http://emacs.1067599.n5.nabble.com/indentation-of-ggplot-code-and-ess-13-09-02-td322315.html#a322335
+(add-to-list 'ess-style-alist
+	     '(khw-R (ess-indent-level . 2)
+                     (ess-first-continued-statement-offset . 2)
+                     (ess-continued-statement-offset . 0)
+                     (ess-brace-offset . 0)
+                     (ess-arg-function-offset . 4)
+                     (ess-arg-function-offset-new-line . '(4))
+                     (ess-expression-offset . 4)
+                     (ess-else-offset . 0)
+                     (ess-close-brace-offset . 0)))
+(setq ess-default-style 'khw-R)
+
 
 ;;;;;;;;;; Helm
 ;; Give me my damn tab completion
