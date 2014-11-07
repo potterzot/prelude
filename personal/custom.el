@@ -59,6 +59,9 @@
                      (ess-close-brace-offset . 0)))
 (setq ess-default-style 'khw-R)
 
+;; Don't restore history or save on exit
+(setq-default inferior-R-args "--no-restore-history --no-save")
+
 
 ;;;;;;;;;; Helm
 ;; Give me my damn tab completion
