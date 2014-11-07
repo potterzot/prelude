@@ -14,7 +14,7 @@
  '(font-lock-builtin-face ((t (:foreground "#B58900" :inverse-video nil :underline nil :slant normal :weight normal))))
  '(helm-ff-directory ((t (:foreground "#2AA198"))))
  '(helm-selection ((t (:background "dark slate gray"))))
- '(helm-source-header ((t (:foreground "#E0E2E4" :weight bold :height 1.3 :family "Sans Serif")))))
+ '(helm-source-header ((t (:foreground "#839496" :weight bold :height 1.1 :family "Sans Serif")))))
 
 (prelude-require-packages '(twittering-mode
                            sublime-themes
