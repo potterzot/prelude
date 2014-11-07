@@ -16,12 +16,13 @@
  '(helm-selection ((t (:background "dark slate gray"))))
  '(helm-source-header ((t (:foreground "#839496" :weight bold :height 1.1 :family "Sans Serif")))))
 
-(prelude-require-packages '(twittering-mode
-                           sublime-themes
-                           ess
-                           org
-                           floobits
-                           color-theme-solarized))
+(prelude-require-packages '(color-theme-solarized
+                            ess
+                            floobits
+                            org
+                            polymode
+                            sublime-themes
+                            twittering-mode))
 
 ;; Remap meta and super on Mac
 (setq mac-command-modifier 'meta)
@@ -99,7 +100,6 @@
 
 ;;; Polymode ----------------------------------------------
 
-(require 'polymode)
 (require 'poly-R)
 (require 'poly-markdown)
 (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
