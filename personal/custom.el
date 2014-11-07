@@ -33,7 +33,8 @@
 ;; Fill paragraphs at 80 characters
 (setq-default fill-column 80)
 
-;;;;;;;;;; ESS
+;;; ESS ---------------------------------------------------
+
 ;; Activate ESS
 (require 'ess-site)
 
@@ -63,12 +64,14 @@
 (setq-default inferior-R-args "--no-restore-history --no-save")
 
 
-;;;;;;;;;; Helm
+;;; Helm --------------------------------------------------
+
 ;; Give me my damn tab completion
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 
 
-;;;;;;;;;; Org
+;;; Org ---------------------------------------------------
+
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 
@@ -94,7 +97,8 @@
 (setq org-hide-emphasis-markers t)
 
 
-;;;;;;;;;; Polymode
+;;; Polymode ----------------------------------------------
+
 (require 'polymode)
 (require 'poly-R)
 (require 'poly-markdown)
