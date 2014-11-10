@@ -73,7 +73,7 @@
 (add-hook 'ess-R-post-run-hook 'smartparens-mode)
 
 ;; Disable conversion of underscores to arrows; map to M-- instead
-(add-hook 'ess-mode-hook (lambda () (ess-toggle-underscore nil)))
+(ess-toggle-underscore nil)
 (setq ess-S-assign-key (kbd "M--"))
 (add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
 
