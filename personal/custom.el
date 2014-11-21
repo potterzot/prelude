@@ -113,8 +113,9 @@
 
 ;; No avatars, please
 (setq jabber-avatar-verbose nil
-      jabber-vcard-avatars-retrieve nil
-      jabber-roster-line-format " %c %-25n %u %-8s (%r)")
+      jabber-vcard-avatars-retrieve nil)
+
+(setq jabber-roster-line-format " %c %n - %s")
 
 ;; Don't show status changes in minibuffer
 (setq jabber-alert-presence-message-function nil)
