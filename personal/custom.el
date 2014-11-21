@@ -101,6 +101,7 @@
 ;; Give me my damn tab completion
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 
+
 ;;; Jabber ------------------------------------------------
 
 ;; Set up google talk
@@ -114,6 +115,17 @@
 (setq jabber-avatar-verbose nil
       jabber-vcard-avatars-retrieve nil
       jabber-roster-line-format " %c %-25n %u %-8s (%r)")
+
+;; Don't show status changes in minibuffer
+(setq jabber-alert-presence-message-function nil)
+
+;; Enable history
+(setq jabber-history-enabled t)
+
+;; Shorten buffer names
+(setq jabber-chat-buffer-format "*-jabber-%n-*"
+      jabber-roster-buffer "*-jabber-*")
+
 
 ;;; Org ---------------------------------------------------
 
