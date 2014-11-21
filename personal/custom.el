@@ -19,6 +19,7 @@
 (prelude-require-packages '(color-theme-solarized
                             ess
                             floobits
+                            jabber
                             org
                             polymode
                             sublime-themes
@@ -99,6 +100,15 @@
 
 ;; Give me my damn tab completion
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+
+;;; Jabber ------------------------------------------------
+
+;; Set up google talk
+(setq jabber-account-list
+      '(("woo.kara@gmail.com"
+         (:network-server . "talk.google.com")
+         (:connection-type . ssl)
+         (:port . 443))))
 
 
 ;;; Org ---------------------------------------------------

@@ -20,3 +20,5 @@ session*
 .cask
 tramp
 /var/pcache
+jabber-avatar-cache/*
+jabber-history/*
