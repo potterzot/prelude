@@ -110,6 +110,10 @@
          (:connection-type . ssl)
          (:port . 443))))
 
+;; No avatars, please
+(setq jabber-avatar-verbose nil
+      jabber-vcard-avatars-retrieve nil
+      jabber-roster-line-format " %c %-25n %u %-8s (%r)")
 
 ;;; Org ---------------------------------------------------
 
