@@ -5,7 +5,8 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1989847d22966b1403bab8c674354b4a2adf6e03e0ffebe097a6bd8a32be1e19" default))))
+    ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1989847d22966b1403bab8c674354b4a2adf6e03e0ffebe097a6bd8a32be1e19" default)))
+ '(jabber-resource-line-format "     %r - %s"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -14,7 +15,14 @@
  '(font-lock-builtin-face ((t (:foreground "#B58900" :inverse-video nil :underline nil :slant normal :weight normal))))
  '(helm-ff-directory ((t (:foreground "#2AA198"))))
  '(helm-selection ((t (:background "dark slate gray"))))
- '(helm-source-header ((t (:foreground "#839496" :weight bold :height 1.1 :family "Sans Serif")))))
+ '(helm-source-header ((t (:foreground "#839496" :weight bold :height 1.1 :family "Sans Serif"))))
+ '(jabber-chat-prompt-foreign ((t (:foreground "#B58900" :inverse-video nil :underline nil :slant normal :weight bold))))
+ '(jabber-chat-prompt-local ((t (:foreground "#2AA198" :inverse-video nil :underline nil :slant normal :weight bold))))
+ '(jabber-roster-user-away ((t (:foreground "#2AA198" :inverse-video nil :underline nil :slant italic :weight normal))))
+ '(jabber-roster-user-dnd ((t (:foreground "#DC322F" :inverse-video nil :underline nil :slant italic :weight normal))))
+ '(jabber-roster-user-error ((t (:foreground "#DC322F" :slant italic :weight light))))
+ '(jabber-roster-user-online ((t (:foreground "#B58900" :inverse-video nil :underline nil :slant normal :weight normal))))
+ '(jabber-roster-user-xa ((t (:foreground "#839496" :inverse-video nil :underline nil :slant italic :weight normal)))))
 
 (prelude-require-packages '(color-theme-solarized
                             ess
