@@ -162,6 +162,14 @@
 ;; Collapse emphasis marks in org mode
 (setq org-hide-emphasis-markers t)
 
+;; Org header for non .org files that I want to open in org mode
+(defun insert-org-header ()
+  (interactive)
+  (save-excursion
+    (goto-line 1)
+    (end-of-line)
+    (insert " -*- mode: org -*-")))
+
 
 ;;; Polymode ----------------------------------------------
 
