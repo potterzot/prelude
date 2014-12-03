@@ -129,7 +129,7 @@
 (setq jabber-alert-presence-message-function nil)
 
 ;; Enable history
-(setq jabber-history-enabled t)
+(setq jabber-history-enabled nil)
 
 ;; Shorten buffer names
 (setq jabber-chat-buffer-format "*-jabber-%n-*"
