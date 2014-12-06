@@ -181,6 +181,11 @@
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
 
+;;; Yasnippet ---------------------------------------------
+
+(yas-global-mode t)
+
+
 
 (provide 'custom)
 
