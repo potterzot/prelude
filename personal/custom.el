@@ -104,6 +104,11 @@
 (setq-default inferior-R-args "--no-restore-history --no-save")
 
 
+;;; Google Translate --------------------------------------
+
+(setq google-translate-translation-directions-alist '(("ru" . "en") ("en" . "ru")))
+
+
 ;;; Helm --------------------------------------------------
 
 ;; Give me my damn tab completion
