@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: FUNC <- function(...) { ... }
+# key: func
+# binding: direct-keybinding
+# expand-env: ((yas-indent-line 'fixed))
+# --
+${1:name} <- function(${2:args}) {
+  $3
+}
+
+$0

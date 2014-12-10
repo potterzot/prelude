@@ -1,0 +1,18 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: rdoc
+# key: rdoc
+# binding: direct-keybinding
+# --
+#' $1
+#'
+#' $2
+#'
+${3:#' @param $4}
+${5:#'
+#'@importFrom $6}
+#'
+#' @author
+#'
+${7:#' @export}
+
+$0
