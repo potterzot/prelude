@@ -15,4 +15,4 @@ data_horiz <- read.csv("../data-orig/$0",
 vdata <- t_icedata(data_horiz)
 
 source_url("https://raw.githubusercontent.com/karawoo/icetest/master/test_icedata.R",
-           echo = TRUE)
+           echo = TRUE, max.deparse.length = 1e3)
