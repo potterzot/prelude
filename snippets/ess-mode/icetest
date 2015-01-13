@@ -8,6 +8,7 @@
 ####################${1:$(make-string (string-width yas-text) ?\#)}######
 
 library("devtools")
+library("icetest")
 
 data_horiz <- read.csv("../data-orig/$0",
                        stringsAsFactors = FALSE)
