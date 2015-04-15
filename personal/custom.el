@@ -13,7 +13,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(font-lock-builtin-face ((t (:foreground "#B58900" :inverse-video nil :underline nil :slant normal :weight normal))))
+ '(header-line ((t (:inherit mode-line :foreground "#2aa198"))))
+ '(helm-candidate-number ((t (:foreground "#839496"))))
  '(helm-ff-directory ((t (:foreground "#2AA198"))))
+ '(helm-ff-dotted-directory ((t (:foreground "#657b83"))))
+ '(helm-ff-executable ((t (:foreground "#d33682"))))
  '(helm-selection ((t (:background "dark slate gray"))))
  '(helm-source-header ((t (:foreground "#839496" :weight bold :height 1.1 :family "Sans Serif"))))
  '(jabber-chat-prompt-foreign ((t (:foreground "#B58900" :inverse-video nil :underline nil :slant normal :weight bold))))
@@ -22,7 +26,8 @@
  '(jabber-roster-user-dnd ((t (:foreground "#DC322F" :inverse-video nil :underline nil :slant italic :weight normal))))
  '(jabber-roster-user-error ((t (:foreground "#DC322F" :slant italic :weight light))))
  '(jabber-roster-user-online ((t (:foreground "#B58900" :inverse-video nil :underline nil :slant normal :weight normal))))
- '(jabber-roster-user-xa ((t (:foreground "#839496" :inverse-video nil :underline nil :slant italic :weight normal)))))
+ '(jabber-roster-user-xa ((t (:foreground "#839496" :inverse-video nil :underline nil :slant italic :weight normal))))
+ '(mode-line-buffer-id ((t (:foreground "#2aa198")))))
 
 (prelude-require-packages '(solarized-theme
                             ess
