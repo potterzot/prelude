@@ -45,6 +45,9 @@
 ;; Fill paragraphs at 80 characters
 (setq-default fill-column 80)
 
+;; Set default directory to home
+(setq default-directory "~/")
+
 ;; Function to swap buffer orientation
 ;; http://www.emacswiki.org/emacs/ToggleWindowSplit
 (defun toggle-window-split ()
