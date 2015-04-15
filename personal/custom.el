@@ -33,6 +33,7 @@
                             ess
                             floobits
                             jabber
+                            markdown-mode
                             org
                             polymode
                             sublime-themes
