@@ -146,6 +146,15 @@
       jabber-roster-buffer "*-jabber-*")
 
 
+;;; Markdown ----------------------------------------------
+
+;; Don't strip trailing whitespace in markdown mode
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (make-local-variable 'prelude-clean-whitespace-on-save)
+            (setq-local prelude-clean-whitespace-on-save nil)))
+
+
 ;;; Org ---------------------------------------------------
 
 ;; Disable whitespace mode in org mode
