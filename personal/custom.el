@@ -108,6 +108,9 @@
 ;; Don't restore history or save on exit
 (setq-default inferior-R-args "--no-restore-history --no-save")
 
+;; C-c C-z to launch REPL
+(add-hook 'ess-mode-hook (lambda () (define-key ess-mode-map (kbd "C-c C-z") 'ess-switch-to-inferior-or-script-buffer)))
+
 
 ;;; Google Translate --------------------------------------
 
