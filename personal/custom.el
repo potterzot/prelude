@@ -29,7 +29,7 @@
  '(jabber-roster-user-xa ((t (:foreground "#839496" :inverse-video nil :underline nil :slant italic :weight normal))))
  '(mode-line-buffer-id ((t (:foreground "#2aa198")))))
 
-(prelude-require-packages '(solarized-theme
+(prelude-require-packages '(color-theme-sanityinc-solarized
                             ess
                             floobits
                             jabber
