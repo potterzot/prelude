@@ -24,7 +24,7 @@
  '(jabber-roster-user-online ((t (:foreground "#B58900" :inverse-video nil :underline nil :slant normal :weight normal))))
  '(jabber-roster-user-xa ((t (:foreground "#839496" :inverse-video nil :underline nil :slant italic :weight normal)))))
 
-(prelude-require-packages '(color-theme-solarized
+(prelude-require-packages '(solarized-theme
                             ess
                             floobits
                             jabber
@@ -36,9 +36,6 @@
 ;; Remap meta and super on Mac
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
-
-;; Load solarized dark theme
-(load-theme 'solarized-dark t)
 
 ;; Fill paragraphs at 80 characters
 (setq-default fill-column 80)
