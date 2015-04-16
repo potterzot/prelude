@@ -49,6 +49,12 @@
 ;; Set default directory to home
 (setq default-directory "~/")
 
+;; Disable whitespace mode
+(setq prelude-whitespace nil)
+
+;; C-x C-b should bring up ibuffer
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
 ;; Function to swap buffer orientation
 ;; http://www.emacswiki.org/emacs/ToggleWindowSplit
 (defun toggle-window-split ()
