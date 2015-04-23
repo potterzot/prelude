@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1989847d22966b1403bab8c674354b4a2adf6e03e0ffebe097a6bd8a32be1e19" default)))
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1989847d22966b1403bab8c674354b4a2adf6e03e0ffebe097a6bd8a32be1e19" default)))
  '(jabber-resource-line-format "     %r - %s"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -29,13 +29,13 @@
  '(jabber-roster-user-xa ((t (:foreground "#839496" :inverse-video nil :underline nil :slant italic :weight normal))))
  '(mode-line-buffer-id ((t (:foreground "#2aa198")))))
 
-(prelude-require-packages '(color-theme-sanityinc-solarized
-                            ess
+(prelude-require-packages '(ess
                             floobits
                             jabber
                             markdown-mode
                             org
                             polymode
+                            solarized-theme
                             sublime-themes
                             twittering-mode))
 
