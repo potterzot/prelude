@@ -115,6 +115,38 @@
 ;; Don't restore history or save on exit
 (setq-default inferior-R-args "--no-restore-history --no-save")
 
+;; Don't ask me for a directory on startup
+(setq ess-ask-for-ess-directory nil)
+
+;; Make M-return do a lot of things: start R repl next to script, send
+;; highlighted code to console, or send current line to console
+;; http://kieranhealy.org/blog/archives/2009/10/12/make-shift-enter-do-a-lot-in-ess/
+(defun my-ess-start-R ()
+  (interactive)
+  (if (not (member "*R*" (mapcar (function buffer-name) (buffer-list))))
+      (progn
+        (delete-other-windows)
+        (setq w1 (selected-window))
+        (setq w1name (buffer-name))
+        (setq w2 (split-window w1 nil t))
+        (R)
+        (set-window-buffer w2 "*R*")
+        (set-window-buffer w1 w1name))))
+(defun my-ess-eval ()
+  (interactive)
+  (my-ess-start-R)
+  (if (and transient-mark-mode mark-active)
+      (call-interactively 'ess-eval-region)
+    (call-interactively 'ess-eval-line-and-step)))
+(add-hook 'ess-mode-hook
+          '(lambda()
+             (local-set-key [(M-return)] 'my-ess-eval)))
+
+;; Use s-return to set directory to location of current file
+(add-hook 'ess-mode-hook
+          '(lambda()
+             (local-set-key [(s-return)] 'ess-use-this-dir)))
+
 
 ;;; Google Translate --------------------------------------
 
