@@ -32,6 +32,7 @@
 (prelude-require-packages '(ess
                             floobits
                             jabber
+                            key-combo
                             markdown-mode
                             org
                             polymode
@@ -183,6 +184,27 @@
 ;; Shorten buffer names
 (setq jabber-chat-buffer-format "*-jabber-%n-*"
       jabber-roster-buffer "*-jabber-*")
+
+;;; Key-combo ---------------------------------------------
+
+(global-key-combo-mode t)
+
+(defvar ess-key-combos
+  '((","  . ", ")
+    ("~"  . " ~ ")
+    (">=" . " >= ")
+    ("<=" . " <= ")
+    (":=" . " := ")
+    ("<>" . " %<>% ")
+    ("*"  . ("*" " * "))
+    ("^"  . ("^" " ^ "))
+    ("/"  . ("/" " / "))
+    (">"  . (">" " %>% "))
+    ("$"  . ("$" " %$% "))))
+
+(key-combo-define-hook '(ess-mode-hook inferior-ess-mode-hook)
+                       'ess-key-combo-load-default
+                       ess-key-combos)
 
 
 ;;; Markdown ----------------------------------------------
