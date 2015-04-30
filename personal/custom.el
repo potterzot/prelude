@@ -190,17 +190,11 @@
 (global-key-combo-mode t)
 
 (defvar ess-key-combos
-  '((","  . ", ")
-    ("~"  . " ~ ")
-    (">=" . " >= ")
-    ("<=" . " <= ")
-    (":=" . " := ")
-    ("<>" . " %<>% ")
+  '(("+"  . ("+" " + "))
+    ("-"  . ("-" " - "))
     ("*"  . ("*" " * "))
-    ("^"  . ("^" " ^ "))
     ("/"  . ("/" " / "))
-    (">"  . (">" " %>% "))
-    ("$"  . ("$" " %$% "))))
+    (">"  . (">" " %>% "))))
 
 (key-combo-define-hook '(ess-mode-hook inferior-ess-mode-hook)
                        'ess-key-combo-load-default
