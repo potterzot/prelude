@@ -40,6 +40,9 @@
                             sublime-themes
                             twittering-mode))
 
+;; Load flip-tables
+(load (concat prelude-personal-dir "/flip-tables.el"))
+
 ;; Remap meta and super on Mac
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier 'super)
@@ -184,6 +187,7 @@
 ;; Shorten buffer names
 (setq jabber-chat-buffer-format "*-jabber-%n-*"
       jabber-roster-buffer "*-jabber-*")
+
 
 ;;; Key-combo ---------------------------------------------
 
