@@ -40,8 +40,14 @@
                             sublime-themes
                             twittering-mode))
 
-;; Load flip-tables
-(load (concat prelude-personal-dir "/flip-tables.el"))
+;; Load flip-tables & shrug
+(defvar load-personal-config-list)
+(setq load-personal-config-list '("/flip-tables.el"
+                                  "/shrug.el"))
+
+(mapc (lambda (rmd-file-name)
+        (load (concat prelude-personal-dir rmd-file-name)))
+      load-personal-config-list)
 
 ;; Remap meta and super on Mac
 (setq mac-command-modifier 'meta)
