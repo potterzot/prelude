@@ -168,6 +168,22 @@
 (define-key ess-mode-map (kbd "C->") 'then_R_operator)
 (define-key inferior-ess-mode-map (kbd "C->") 'then_R_operator)
 
+;; Bring up empty R script and R console for quick calculations
+(defun R-scratch ()
+  (interactive)
+      (progn
+        (delete-other-windows)
+        (setq new-buf (get-buffer-create "scratch.R"))
+        (switch-to-buffer new-buf)
+        (setq w1 (selected-window))
+        (setq w1name (buffer-name))
+        (setq w2 (split-window w1 nil t))
+        (R)
+        (set-window-buffer w2 "*R*")
+        (set-window-buffer w1 w1name)))
+
+(global-set-key (kbd "C-x 9") 'R-scratch)
+
 
 ;;; Google Translate --------------------------------------
 
