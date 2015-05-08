@@ -97,6 +97,11 @@
 
 (global-set-key (kbd "C-x 5") 'toggle-window-split)
 
+;; Insert iso-date
+(defun insert-iso-date ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d" (current-time))))
+
 
 ;;; ESS ---------------------------------------------------
 
