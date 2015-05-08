@@ -183,6 +183,7 @@
         (delete-other-windows)
         (setq new-buf (get-buffer-create "scratch.R"))
         (switch-to-buffer new-buf)
+        (R-mode)
         (setq w1 (selected-window))
         (setq w1name (buffer-name))
         (setq w2 (split-window w1 nil t))
