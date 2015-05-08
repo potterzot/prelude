@@ -65,6 +65,9 @@
 ;; C-x C-b should bring up ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; And C-c C-b should eval-buffer wtf why did this disappear?
+(global-set-key (kbd "C-c C-b") 'eval-buffer)
+
 ;; Function to swap buffer orientation
 ;; http://www.emacswiki.org/emacs/ToggleWindowSplit
 (defun toggle-window-split ()
