@@ -102,6 +102,11 @@
   (interactive)
   (insert (format-time-string "%Y-%m-%d" (current-time))))
 
+
+;; My sentences have one space after a period.
+(setq sentence-end-double-space nil)
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                ESS mode                                ;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
