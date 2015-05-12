@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: lisp-header
+# key: hdr
+# binding: direct-keybinding
+# --
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;${1:$(make-string (- 35 (floor (/ (string-width yas-text) 2))) ?\ )} $1 ${1:$(make-string (- 35 (floor (/ (string-width yas-text) 2))) ?\ )};;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+$0
