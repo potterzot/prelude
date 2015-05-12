@@ -187,8 +187,9 @@
         (setq w1 (selected-window))
         (setq w1name (buffer-name))
         (setq w2 (split-window w1 nil t))
-        (R)
-        (set-window-buffer w2 "*R*")
+        (if (not (member "*R*" (mapcar (function buffer-name) (buffer-list))))
+            (R)
+          (set-window-buffer w2 "*R*"))
         (set-window-buffer w1 w1name)))
 
 (global-set-key (kbd "C-x 9") 'R-scratch)
