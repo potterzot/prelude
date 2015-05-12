@@ -224,8 +224,8 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
         (setq w1name (buffer-name))
         (setq w2 (split-window w1 nil t))
         (if (not (member "*R*" (mapcar (function buffer-name) (buffer-list))))
-            (R)
-          (set-window-buffer w2 "*R*"))
+            (R))
+        (set-window-buffer w2 "*R*")
         (set-window-buffer w1 w1name)))
 
 (global-set-key (kbd "C-x 9") 'R-scratch)
