@@ -339,6 +339,20 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
     (end-of-line)
     (insert " -*- mode: org -*-")))
 
+;; CV stuff
+(add-to-list 'org-latex-classes
+             '("cv"
+               "\\documentclass{cv}
+               [NO-DEFAULT-PACKAGES]
+               [EXTRA]"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+(setq org-export-allow-bind-keywords t)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                Polymode                                ;;;;
