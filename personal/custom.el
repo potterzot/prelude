@@ -325,6 +325,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (sp-local-pair 'org-mode "/" "/")
 (sp-local-pair 'org-mode "*" "*")
 
+;; LaTeX backend
+(require 'ox-latex)
+
 ;; Markdown export please
 (setq org-export-backends `(markdown html))
 
