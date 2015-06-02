@@ -329,7 +329,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (require 'ox-latex)
 
 ;; Markdown export please
-(setq org-export-backends `(markdown html))
+(setq org-export-backends
+      `(md
+        html))
 
 ;; Collapse emphasis marks in org mode
 (setq org-hide-emphasis-markers t)
