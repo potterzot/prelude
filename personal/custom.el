@@ -320,10 +320,11 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; LaTeX backend
 (require 'ox-latex)
 
-;; Markdown export please
+;; Export options
 (setq org-export-backends
-      `(md
-        html))
+      `(deck
+        html
+        md))
 
 ;; Collapse emphasis marks in org mode
 (setq org-hide-emphasis-markers t)
