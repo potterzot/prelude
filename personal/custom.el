@@ -293,6 +293,11 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
             (make-local-variable 'prelude-clean-whitespace-on-save)
             (setq-local prelude-clean-whitespace-on-save nil)))
 
+;; Auto fill mode
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (turn-on-auto-fill)))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                Org mode                                ;;;;
