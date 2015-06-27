@@ -316,14 +316,13 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (sp-local-pair 'org-mode "/" "/")
 (sp-local-pair 'org-mode "*" "*")
 
-;; LaTeX backend
-(require 'ox-latex)
-
 ;; Export options
 (setq org-export-backends
       `(deck
         html
         md))
+
+(require 'ox-latex)
 
 ;; Collapse emphasis marks in org mode
 (setq org-hide-emphasis-markers t)
