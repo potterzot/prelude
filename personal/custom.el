@@ -334,18 +334,12 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 
 ;; Export from org using XeLaTeX
 ;; From http://lists.gnu.org/archive/html/emacs-orgmode/2013-05/msg00975.html
-
-;;; XeLaTeX customisations
 ;; remove "inputenc" from default packages as it clashes with xelatex
 (setf org-latex-default-packages-alist
       (remove '("AUTO" "inputenc" t) org-latex-default-packages-alist))
-
-;; (add-to-list 'org-latex-packages-alist '("" "xltxtra" t))
-;; ;; choose Linux Libertine O as serif and Linux Biolinum O as sans-serif fonts
-;; (add-to-list 'org-latex-packages-alist '("" "libertineotf" t))
-
+(add-to-list 'org-latex-packages-alist '("" "xltxtra" t))
 ;; org to latex customisations, -shell-escape needed for minted
-(setq org-latex-pdf-process               ; for regular export
+(setq org-latex-pdf-process
       '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
