@@ -332,6 +332,12 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 
 (require 'ox-latex)
 
+;; is it even possible to export from org mode with xelatex? signs point to no.
+
+;;  From http://comments.gmane.org/gmane.emacs.orgmode/62340
+(setq org-e-latex-pdf-process 
+      '("latexmk -pdflatex='xelatex --shell-escape' -pdf -quiet %f"))
+
 ;; From Org FAQ: http://orgmode.org/worg/org-faq.html#orgheadline185
 ;; Originally taken from Bruno Tavernier: http://thread.gmane.org/gmane.emacs.orgmode/31150/focus=31432
 ;; but adapted to use latexmk 4.20 or higher.
