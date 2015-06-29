@@ -136,6 +136,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; My sentences have one space after a period.
 (setq sentence-end-double-space nil)
 
+;; Don't make that awful sound
+(setq ring-bell-function #'ignore)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                ESS mode                                ;;;;
