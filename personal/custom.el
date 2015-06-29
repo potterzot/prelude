@@ -35,6 +35,7 @@
                             key-combo
                             markdown-mode
                             org
+                            ox-gfm
                             ox-pandoc
                             polymode
                             solarized-theme
@@ -331,8 +332,10 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Export options
 (setq org-export-backends
       `(deck
+        gfm
         html
-        md))
+        md
+        pandoc))
 
 (require 'ox-latex)
 
