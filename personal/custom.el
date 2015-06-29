@@ -35,6 +35,7 @@
                             key-combo
                             markdown-mode
                             org
+                            ox-pandoc
                             polymode
                             solarized-theme
                             sublime-themes
@@ -350,7 +351,7 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Function to export markdown, LaTeX, and PDF simultaneously
 (defun org-export-mtp ()
   (interactive)
-  (org-md-export-to-markdown)
+  (org-pandoc-export-to-markdown_github)
   (org-latex-export-to-pdf))
 
 ;; Collapse emphasis marks in org mode
