@@ -274,6 +274,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (setq jabber-chat-buffer-format "*-jabber-%n-*"
       jabber-roster-buffer "*-jabber-*")
 
+;; View emoji in jabber
+(add-hook 'jabber-chat-mode-hook (lambda () (emoji-cheat-sheet-plus-display-mode)))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                Key-chord                               ;;;;
