@@ -33,7 +33,8 @@ c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
  '(jabber-roster-user-xa ((t (:foreground "#839496" :inverse-video nil :underline nil :slant italic :weight normal))))
  '(mode-line-buffer-id ((t (:foreground "#2aa198")))))
 
-(prelude-require-packages '(ess
+(prelude-require-packages '(emoji-cheat-sheet-plus
+                            ess
                             floobits
                             jabber
                             key-combo
