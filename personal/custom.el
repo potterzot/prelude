@@ -7,7 +7,8 @@
    (quote
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "1989847d22966b1403bab8c674354b4a2adf6e03e0ffebe097a6bd8a32be1e19" default)))
  '(flycheck-lintr-linters
-   " default_linters[-which(names(default_linters)==\"object_camel_case_linter\")]")
+   " default_linters[-which(names(default_linters) %in%
+c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
  '(jabber-resource-line-format "     %r - %s")
  '(magit-use-overlays nil))
 (custom-set-faces
