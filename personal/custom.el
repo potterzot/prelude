@@ -43,9 +43,11 @@ c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
                             ox-gfm
                             ox-pandoc
                             polymode
+                            projectile
                             solarized-theme
                             sublime-themes
-                            twittering-mode))
+                            twittering-mode
+                            wgrep))
 
 ;; Load flip-tables & shrug
 (defvar load-personal-config-list)
