@@ -146,6 +146,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Don't make that awful sound
 (setq ring-bell-function #'ignore)
 
+;; Turn off flycheck. Too many problems.
+(global-flycheck-mode -1)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                ESS mode                                ;;;;
