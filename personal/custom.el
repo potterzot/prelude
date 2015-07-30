@@ -410,6 +410,15 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
+;; Export quotes using \enquote{}
+(add-to-list 'org-export-smart-quotes-alist 
+             '("am"
+               (opening-double-quote :utf-8 "“" :html "&ldquo;" :latex "\\enquote{" :texinfo "``")
+               (closing-double-quote :utf-8 "”" :html "&rdquo;" :latex "}" :texinfo "''")
+               (opening-single-quote :utf-8 "‘" :html "&lsquo;" :latex "\\enquote*{" :texinfo "`")
+               (closing-single-quote :utf-8 "’" :html "&rsquo;" :latex "}" :texinfo "'")
+               (apostrophe :utf-8 "’" :html "&rsquo;")))
+
 (setq org-export-allow-bind-keywords t)
 
 
