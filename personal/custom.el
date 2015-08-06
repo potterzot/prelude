@@ -222,18 +222,18 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Bring up empty R script and R console for quick calculations
 (defun R-scratch ()
   (interactive)
-      (progn
-        (delete-other-windows)
-        (setq new-buf (get-buffer-create "scratch.R"))
-        (switch-to-buffer new-buf)
-        (R-mode)
-        (setq w1 (selected-window))
-        (setq w1name (buffer-name))
-        (setq w2 (split-window w1 nil t))
-        (if (not (member "*R*" (mapcar (function buffer-name) (buffer-list))))
-            (R))
-        (set-window-buffer w2 "*R*")
-        (set-window-buffer w1 w1name)))
+  (progn
+    (delete-other-windows)
+    (setq new-buf (get-buffer-create "scratch.R"))
+    (switch-to-buffer new-buf)
+    (R-mode)
+    (setq w1 (selected-window))
+    (setq w1name (buffer-name))
+    (setq w2 (split-window w1 nil t))
+    (if (not (member "*R*" (mapcar (function buffer-name) (buffer-list))))
+        (R))
+    (set-window-buffer w2 "*R*")
+    (set-window-buffer w1 w1name)))
 
 (global-set-key (kbd "C-x 9") 'R-scratch)
 
