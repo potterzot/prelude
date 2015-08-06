@@ -442,6 +442,7 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
                                    "AND m:/woo.kara@gmail.com/INBOX"
                                    "NOT maildir:'/woo.kara@gmail.com/github'"
                                    "NOT maildir:'/woo.kara@gmail.com/Brown'"
+                                   "NOT maildir:'/woo.kara@gmail.com/Lists'"
                                    "AND date:today..now")
                                  " ") "Today's personal Unreads" ?h))
 (add-to-list 'mu4e-bookmarks `(,(string-join
