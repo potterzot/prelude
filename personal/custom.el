@@ -152,6 +152,12 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Turn off flycheck. Too many problems.
 (global-flycheck-mode -1)
 
+;; Timezones
+(setq display-time-world-list
+      '(("America/Los_Angeles" "Pacific")
+        ("America/New_York" "Eastern")
+        ("Asia/Irkutsk" "Irkutsk")))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                ESS mode                                ;;;;
