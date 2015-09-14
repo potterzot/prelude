@@ -505,6 +505,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 
 (add-hook 'mu4e-compose-pre-hook 'my-mu4e-set-account)
 
+;; Don't show messages in duplicate
+(setq mu4e-headers-skip-duplicates t)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                Org mode                                ;;;;
