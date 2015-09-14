@@ -466,7 +466,7 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
                                    "OR flag:unread"
                                    "AND m:/woo@nceas.ucsb.edu/INBOX"
                                    "AND date:today..now")
-                                 " ") "Today's Unreads" ?u))
+                                 " ") "Today's Unreads" ?g))
 
 ;; Switch accounts
 
