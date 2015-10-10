@@ -323,6 +323,10 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (setq magit-branch-arguments nil)
 (setq magit-push-arguments '("--set-upstream"))
 
+;; Activate git-commit-insert-issue minor mode to bring up a helm list of github
+;; issues when typing "fixes #" in a commit message
+(add-hook 'git-commit-mode-hook 'git-commit-insert-issue-mode)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                Markdown                                ;;;;
