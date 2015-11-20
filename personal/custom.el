@@ -50,6 +50,9 @@ c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
                             twittering-mode
                             wgrep))
 
+;; Start up in fullscreen
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; Load flip-tables & shrug
 (defvar load-personal-config-list)
 (setq load-personal-config-list '("/flip-tables.el"
