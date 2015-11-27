@@ -562,6 +562,18 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
+;; Add hw class to org-latex-classes
+(add-to-list 'org-latex-classes
+             '("hw"
+               "\\documentclass{hw}
+               [NO-DEFAULT-PACKAGES]
+               [EXTRA]"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
 ;; Export quotes using \enquote{}
 (add-to-list 'org-export-smart-quotes-alist 
              '("am"
