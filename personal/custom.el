@@ -16,7 +16,7 @@ c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#002b36" :foreground "#839496" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 128 :width normal :foundry "unknown" :family "Input"))))
+ '(default ((t (:inherit nil :stipple nil :background "#002b36" :foreground "#839496" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 128 :width normal :foundry "unknown" :font "Input-14"))))
  '(font-lock-builtin-face ((t (:foreground "#B58900" :inverse-video nil :underline nil :slant normal :weight normal))))
  '(header-line ((t (:inherit mode-line :foreground "#2aa198"))))
  '(helm-candidate-number ((t (:foreground "#839496"))))
