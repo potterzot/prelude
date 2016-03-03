@@ -590,6 +590,8 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
                (closing-single-quote :utf-8 "’" :html "&rsquo;" :latex "}" :texinfo "'")
                (apostrophe :utf-8 "’" :html "&rsquo;")))
 
+(setq org-export-with-smart-quotes t)
+
 (setq org-export-allow-bind-keywords t)
 
 
