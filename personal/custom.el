@@ -41,6 +41,7 @@ c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
                             key-combo
                             markdown-mode
                             org
+                            org-ref
                             ox-gfm
                             ox-pandoc
                             polymode
