@@ -535,9 +535,11 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (setf org-latex-default-packages-alist
       (remove '("AUTO" "inputenc" t) org-latex-default-packages-alist))
 (add-to-list 'org-latex-packages-alist '("" "xltxtra" t))
+
 ;; org to latex customisations, -shell-escape needed for minted
 (setq org-latex-pdf-process
       '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "bibtex %b"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
