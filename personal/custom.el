@@ -560,7 +560,22 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
     (end-of-line)
     (insert " -*- mode: org -*-")))
 
-;; CV stuff
+;; Export quotes using \enquote{}
+(add-to-list 'org-export-smart-quotes-alist 
+             '("am"
+               (opening-double-quote :utf-8 "“" :html "&ldquo;" :latex "\\enquote{" :texinfo "``")
+               (closing-double-quote :utf-8 "”" :html "&rdquo;" :latex "}" :texinfo "''")
+               (opening-single-quote :utf-8 "‘" :html "&lsquo;" :latex "\\enquote*{" :texinfo "`")
+               (closing-single-quote :utf-8 "’" :html "&rsquo;" :latex "}" :texinfo "'")
+               (apostrophe :utf-8 "’" :html "&rsquo;")))
+
+(setq org-export-with-smart-quotes t)
+
+(setq org-export-allow-bind-keywords t)
+
+;; Additional LaTeX classes:
+
+;; CV
 (add-to-list 'org-latex-classes
              '("cv"
                "\\documentclass{cv}
@@ -584,18 +599,20 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
-;; Export quotes using \enquote{}
-(add-to-list 'org-export-smart-quotes-alist 
-             '("am"
-               (opening-double-quote :utf-8 "“" :html "&ldquo;" :latex "\\enquote{" :texinfo "``")
-               (closing-double-quote :utf-8 "”" :html "&rdquo;" :latex "}" :texinfo "''")
-               (opening-single-quote :utf-8 "‘" :html "&lsquo;" :latex "\\enquote*{" :texinfo "`")
-               (closing-single-quote :utf-8 "’" :html "&rsquo;" :latex "}" :texinfo "'")
-               (apostrophe :utf-8 "’" :html "&rsquo;")))
+;; SIGCHI template
+(add-to-list 'org-latex-classes
+             '("sigchi"
+               "\\documentclass{sigchi}
+               [NO-DEFAULT-PACKAGES]
+               [EXTRA]"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
-(setq org-export-with-smart-quotes t)
 
-(setq org-export-allow-bind-keywords t)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
