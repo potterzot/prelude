@@ -573,6 +573,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 
 (setq org-export-allow-bind-keywords t)
 
+;; Place captions below tables
+(setq org-latex-caption-above nil)
+
 ;; Additional LaTeX classes:
 
 ;; CV
