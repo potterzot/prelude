@@ -656,6 +656,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
+;; Export files with the same name as the main file
+(setq polymode-exporter-output-file-format "%s")
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                 Twitter                                ;;;;
