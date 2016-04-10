@@ -623,6 +623,7 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
+   (lisp . t)
    (python . t)
    (R . t)
    (sh . t)))
