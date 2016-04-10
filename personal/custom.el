@@ -606,6 +606,13 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
+;; letter class
+(add-to-list 'org-latex-classes
+             '("letter"
+               "\\documentclass{letter}
+               [NO-DEFAULT-PACKAGES]
+               [EXTRA]"))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                Org-babel                               ;;;;
