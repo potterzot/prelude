@@ -55,7 +55,7 @@ c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
 ;; Start up in fullscreen
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-;; Load flip-tables & shrug
+;; Load flip-tables (╯°□°）╯︵ ┻━━┻  & shrug ¯\_(ツ)_/¯
 (defvar load-personal-config-list)
 (setq load-personal-config-list '("/flip-tables.el"
                                   "/shrug.el"))
