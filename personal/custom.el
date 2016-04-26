@@ -53,7 +53,7 @@ c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
                             wgrep))
 
 ;; Start up in fullscreen
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+(add-to-list 'default-frame-alist '(fullscreen . fullscreen))
 
 ;; Load flip-tables (╯°□°）╯︵ ┻━━┻  & shrug ¯\_(ツ)_/¯
 (defvar load-personal-config-list)
