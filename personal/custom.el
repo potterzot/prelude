@@ -172,7 +172,10 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
 ;; Remove scroll bars
-(scroll-bar-mode -1)
+(if (display-graphic-p)
+    (progn
+      (tool-bar-mode -1)
+      (scroll-bar-mode -1)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
