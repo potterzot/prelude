@@ -689,6 +689,21 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Use Django-style docstrings
 (setq python-fill-docstring-style 'django)
 
+;; Imitate ess-eval-region-or-line-and-step behavior in Python
+(defun py-eval-region-or-line-and-step ()
+  (interactive)
+  (if (and transient-mark-mode mark-active
+           (> (region-end) (region-beginning)))
+      (elpy-shell-send-region-or-buffer)
+    (progn
+      (end-of-line)
+      (let ((eol (point)))
+        (beginning-of-line)
+        (python-shell-send-region (point) eol))
+      (python-nav-forward-statement)
+      )))
+
+(define-key python-mode-map (kbd "M-<return>") 'py-eval-region-or-line-and-step)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
