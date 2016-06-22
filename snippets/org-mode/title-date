@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Title and date header
+# key: td
+# --
+#+TITLE: $1
+#+DATE: $2
+
+$0
