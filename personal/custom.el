@@ -35,7 +35,14 @@ c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
  '(jabber-roster-user-xa ((t (:foreground "#839496" :inverse-video nil :underline nil :slant italic :weight normal))))
  '(mode-line-buffer-id ((t (:foreground "#2aa198")))))
 
-(prelude-require-packages '(emoji-cheat-sheet-plus
+;; Package repositories
+(require 'package)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("elpy" . "https://jorgenschaefer.github.io/packages/"))
+
+(prelude-require-packages '(ein
+                            emoji-cheat-sheet-plus
+                            elpy
                             ess
                             floobits
                             jabber
@@ -47,6 +54,7 @@ c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
                             ox-pandoc
                             polymode
                             projectile
+                            pyvenv
                             solarized-theme
                             sublime-themes
                             twittering-mode
@@ -497,9 +505,6 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;;;;                                Org mode                                ;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(require 'package)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 
@@ -664,6 +669,26 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 
 ;; Export files with the same name as the main file
 (setq polymode-exporter-output-file-format "%s")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;                          Python, Elpy, Pyvenv                          ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Use Elpy
+(package-initialize)
+(elpy-enable)
+
+;; Use Ipython interpreter
+(elpy-use-ipython)
+
+;; Use my anaconda environments for pyvenv
+(setenv "WORKON_HOME" "/Users/Kara/anaconda/envs")
+(pyvenv-mode 1)
+
+;; Use Django-style docstrings
+(setq python-fill-docstring-style 'django)
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
