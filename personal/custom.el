@@ -675,14 +675,14 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;                          Python, Elpy, Pyvenv                          ;;;;
+;;;;                       Python, Elpy, Pyvenv, EIN                        ;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Use Elpy
 (package-initialize)
 (elpy-enable)
 
-;; Use Ipython interpreter
+;; Use IPython interpreter
 (elpy-use-ipython)
 
 ;; Use my anaconda environments for pyvenv
@@ -706,7 +706,12 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
       (python-nav-forward-statement)
       )))
 
+;; Map py-eval-region-or-line-and-step to M-ret because that's how I have it set
+;; for ESS
 (define-key python-mode-map (kbd "M-<return>") 'py-eval-region-or-line-and-step)
+
+;; In EIN mode, M-return should evaluate the current cell
+;; (define-key ein:notebook-mode-map (kbd "M-<return>") 'ein:worksheet-execute-cell-and-goto-next)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
