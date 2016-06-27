@@ -11,7 +11,7 @@
 c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
  '(jabber-resource-line-format "     %r - %s")
  '(magit-use-overlays nil)
- '(org-agenda-files (quote ("~/todo.org"))))
+ '(org-agenda-files (quote ("~/work/dssg/todo.org" "~/todo.org"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
