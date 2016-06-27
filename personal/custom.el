@@ -653,6 +653,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Set default bibliography for helm
 (setq helm-bibtex-bibliography "~/references.bib")
 
+;; Use citep by default (instead of cite)
+;; (setq org-ref-default-citation-link "citep")
+
 (require 'org-ref)
 
 
