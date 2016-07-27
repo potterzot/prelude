@@ -553,6 +553,10 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
+;; Minted for syntax highlighting
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+(setq org-latex-listings 'minted)
+
 ;; Function to export markdown, LaTeX, and PDF simultaneously
 (defun org-export-mtp ()
   (interactive)
