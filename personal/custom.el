@@ -505,6 +505,8 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;;;;                                Org mode                                ;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(require 'org)
+
 ;; Disable whitespace mode in org mode
 (add-hook 'org-mode-hook (lambda () (whitespace-mode -1)))
 
@@ -522,6 +524,10 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (sp-local-pair 'org-mode "~" "~")
 (sp-local-pair 'org-mode "/" "/")
 (sp-local-pair 'org-mode "*" "*")
+
+;; Allow double quote at the end of a verbatim or code segment
+(setcar (nthcdr 2 org-emphasis-regexp-components) " \t\r\n,")
+(org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
 
 ;; Export options
 (setq org-export-backends
