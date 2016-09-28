@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: Rmd YAML
+# key: rmd
+# --
+---
+title: $1
+author: Kara Woo
+date: `(format-time-string "%B %d, %Y" (current-time))`
+output: ${2:github_document}
+---
+
+$0
