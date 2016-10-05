@@ -158,6 +158,14 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 
 (define-key (current-global-map) [remap kill-sentence] 'my/kill-sentence-dwim)
 
+;; Function to insert new code chunk in R Markdown
+;; http://emacs.stackexchange.com/a/27419/7060
+(defun new-chunk (header) 
+  "Insert an r-chunk in markdown mode. Necessary due to interactions between polymode and yasnippet" 
+  (interactive "sHeader: ") 
+  (insert (concat "```{r " header "}\n\n```")) 
+  (forward-line -1))
+
 ;; My sentences have one space after a period.
 (setq sentence-end-double-space nil)
 
