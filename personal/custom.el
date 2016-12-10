@@ -590,6 +590,10 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Start indented in org
 (setq org-startup-indented t)
 
+;; Set TODO keyword options
+(setq org-todo-keywords
+      '((sequence "TODO" "|" "DONE" "CLOSED")))
+
 ;; Add smartparens
 (smartparens-global-mode t)
 (sp-local-pair 'org-mode "~" "~")
