@@ -22,3 +22,5 @@ tramp
 /var/pcache
 jabber-avatar-cache/*
 jabber-history/*
+.emacs.desktop
+.emacs.desktop.lock
