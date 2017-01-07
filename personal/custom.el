@@ -722,7 +722,7 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
    (lisp . t)
    (python . t)
    (R . t)
-   (sh . t)))
+   (shell . t)))
 
 ;; Quit asking if I want to evaluate the source blocks, I do
 (setq org-confirm-babel-evaluate nil)
