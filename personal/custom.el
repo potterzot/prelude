@@ -797,7 +797,10 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (define-key python-mode-map (kbd "M-<return>") 'py-eval-region-or-line-and-step)
 
 ;; In EIN mode, M-return should evaluate the current cell
-;; (define-key ein:notebook-mode-map (kbd "M-<return>") 'ein:worksheet-execute-cell-and-goto-next)
+;; Require ein-notebook first or else I get an error
+;; https://github.com/millejoh/emacs-ipython-notebook/issues/174
+(require 'ein-notebook) 
+(define-key ein:notebook-mode-map (kbd "M-<return>") 'ein:worksheet-execute-cell-and-goto-next)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
