@@ -769,6 +769,7 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 
 ;; Use IPython interpreter
 (elpy-use-ipython)
+(setq python-shell-interpreter-args "--simple-prompt -i")
 
 ;; Use my anaconda environments for pyvenv
 (setenv "WORKON_HOME" "/Users/Kara/anaconda/envs")
