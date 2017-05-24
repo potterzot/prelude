@@ -265,7 +265,8 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (require 'ess-site)
 
 ;; Smartparens in R repl
-(add-hook 'ess-R-post-run-hook 'smartparens-mode)
+(add-hook 'ess-R-post-run-hook (lambda () (smartparens-mode 1)))
+(add-hook 'inferior-ess-mode-hook (lambda () (smartparens-mode 1)))
 
 ;; Disable conversion of underscores to arrows; map to M-- instead
 (ess-toggle-underscore nil)
