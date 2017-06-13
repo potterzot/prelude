@@ -711,6 +711,18 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
                [NO-DEFAULT-PACKAGES]
                [EXTRA]"))
 
+;; invoice class
+(add-to-list 'org-latex-classes
+             '("invoice"
+               "\\documentclass{invoice}
+               [NO-DEFAULT-PACKAGES]
+               [EXTRA]"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                                Org-babel                               ;;;;
