@@ -51,7 +51,7 @@ c(\"object_camel_case_linter\", \"trailing_blank_lines_linter\"))]")
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(org-agenda-files
    (quote
-    ("~/todo.org" "~/school/uw/todo.org" "~/work/dssg/todo.org" "~/work/jobs/job_hunt_prep.org" "~/work/rstudio/notes.org")))
+    ("~/todo.org" "~/work/jobs/job_hunt_prep.org" "~/work/rstudio/notes.org")))
  '(package-selected-packages
    (quote
     (ac-emoji php-mode color-theme-sanityinc-tomorrow sql-indent 2048-game zop-to-char zenburn-theme yaml-mode world-time-mode which-key wgrep volatile-highlights vkill undo-tree twittering-mode sublime-themes solarized-theme smex smartrep smartparens smart-mode-line slime scss-mode rainbow-mode rainbow-delimiters pyenv-mode polymode ox-pandoc ox-gfm ov org-ref operate-on-number mu4e-maildirs-extension move-text markdown-mode magit latex-preview-pane key-combo json-rpc json-mode js2-mode jabber imenu-anywhere ido-ubiquitous helm-projectile helm-descbinds helm-ag guru-mode grizzl google-translate god-mode gitignore-mode gitconfig-mode git-timemachine gist geiser flycheck flx-ido floobits expand-region exec-path-from-shell ess emoji-cheat-sheet-plus elpy elisp-slime-nav ein easy-kill discover-my-major diminish diff-hl csv-mode crux company-auctex company-anaconda cdlatex browse-kill-ring beacon anzu ag ack-and-a-half ace-window ace-jump-mode ace-jump-buffer)))
