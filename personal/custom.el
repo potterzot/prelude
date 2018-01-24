@@ -3,23 +3,46 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   (vector "#c5c8c6" "#cc6666" "#b5bd68" "#f0c674" "#81a2be" "#b294bb" "#8abeb7" "#373b41"))
  '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
  '(custom-safe-themes
    (quote
     ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
+ '(fci-rule-color "#373b41")
  '(jabber-resource-line-format "     %r - %s")
  '(magit-diff-use-overlays nil)
  '(magit-use-overlays nil)
  '(nrepl-message-colors
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
- '(org-agenda-files
-   (quote
-    ("~/todo.org")))
+ '(org-agenda-files (quote ("~/todo.org")))
  '(package-selected-packages
    (quote
-    (editorconfig zop-to-char zenburn-theme yaml-mode which-key wgrep volatile-highlights vkill undo-tree twittering-mode smex smartrep smartparens smart-mode-line scss-mode rainbow-mode rainbow-delimiters polymode php-mode ox-pandoc ox-gfm ov org-ref operate-on-number mu4e-maildirs-extension move-text markdown-mode magit key-combo json-mode jabber imenu-anywhere helm-projectile helm-descbinds helm-ag guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist geiser flycheck flx-ido floobits expand-region exec-path-from-shell ess emoji-cheat-sheet-plus elpy elisp-slime-nav ein easy-kill discover-my-major diminish diff-hl csv-mode crux company-auctex company-anaconda color-theme-sanityinc-tomorrow cdlatex browse-kill-ring beacon anzu ace-window ac-emoji)))
- '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838"))))
+    (undo-tree uuid editorconfig zop-to-char zenburn-theme yaml-mode which-key wgrep volatile-highlights vkill twittering-mode smex smartrep smartparens smart-mode-line scss-mode rainbow-mode rainbow-delimiters polymode php-mode ox-pandoc ox-gfm ov org-ref operate-on-number mu4e-maildirs-extension move-text markdown-mode magit key-combo json-mode jabber imenu-anywhere helm-projectile helm-descbinds helm-ag guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist geiser flycheck flx-ido floobits expand-region exec-path-from-shell ess emoji-cheat-sheet-plus elpy elisp-slime-nav ein easy-kill discover-my-major diminish diff-hl csv-mode crux company-auctex company-anaconda color-theme-sanityinc-tomorrow cdlatex browse-kill-ring beacon anzu ace-window ac-emoji)))
+ '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#cc6666")
+     (40 . "#de935f")
+     (60 . "#f0c674")
+     (80 . "#b5bd68")
+     (100 . "#8abeb7")
+     (120 . "#81a2be")
+     (140 . "#b294bb")
+     (160 . "#cc6666")
+     (180 . "#de935f")
+     (200 . "#f0c674")
+     (220 . "#b5bd68")
+     (240 . "#8abeb7")
+     (260 . "#81a2be")
+     (280 . "#b294bb")
+     (300 . "#cc6666")
+     (320 . "#de935f")
+     (340 . "#f0c674")
+     (360 . "#b5bd68"))))
+ '(vc-annotate-very-old-color nil))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
