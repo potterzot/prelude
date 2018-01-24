@@ -733,8 +733,8 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (elpy-enable)
 
 ;; Use IPython interpreter
-(elpy-use-ipython)
-(setq python-shell-interpreter-args "--simple-prompt -i")
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i --simple-prompt")
 
 ;; Use my anaconda environments for pyvenv
 (setenv "WORKON_HOME" "/Users/Kara/anaconda/envs")
