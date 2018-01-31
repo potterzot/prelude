@@ -53,7 +53,7 @@
 
 ;; Package repositories
 (require 'package)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 (add-to-list 'package-archives '("elpy" . "https://jorgenschaefer.github.io/packages/"))
 
 (prelude-require-packages '(color-theme-sanityinc-tomorrow
