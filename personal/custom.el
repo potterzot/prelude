@@ -190,6 +190,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Turn off flycheck. Too many problems.
 (global-flycheck-mode -1)
 
+;; Turn on smartparens
+(smartparens-global-mode t)
+
 ;; Timezones
 (setq display-time-world-list
       '(("America/Los_Angeles" "Pacific")
@@ -547,8 +550,7 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (setq org-todo-keywords
       '((sequence "TODO" "|" "DONE" "CLOSED")))
 
-;; Add smartparens
-(smartparens-global-mode t)
+;; Add smartparens options
 (sp-local-pair 'org-mode "~" "~")
 (sp-local-pair 'org-mode "/" "/")
 (sp-local-pair 'org-mode "*" "*")
