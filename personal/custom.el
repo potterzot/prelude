@@ -216,6 +216,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Activate ESS
 (require 'ess-site)
 
+;; Style
+(setq ess-default-style 'RStudio)
+
 ;; Smartparens in R repl
 (add-hook 'ess-R-post-run-hook (lambda () (smartparens-mode 1)))
 (add-hook 'inferior-ess-mode-hook (lambda () (smartparens-mode 1)))
@@ -224,11 +227,6 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (ess-toggle-underscore nil)
 (setq ess-S-assign-key (kbd "M--"))
 (add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
-
-;; Two space indentation
-(add-to-list 'ess-style-alist
-	     '(khw-R (ess-indent-level . 2)))
-(setq ess-default-style 'khw-R)
 
 ;; Don't restore history or save on exit
 (setq-default inferior-R-args "--no-restore-history --no-save")
