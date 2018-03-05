@@ -233,6 +233,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (setq ess-S-assign-key (kbd "M--"))
 (add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
 
+;; When wrapping long lists of function args, put the first on a new line
+(setq ess-fill-calls-newlines t)
+
 ;; Don't restore history or save on exit
 (setq-default inferior-R-args "--no-restore-history --no-save")
 
