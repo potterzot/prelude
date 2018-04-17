@@ -577,6 +577,19 @@ With prefix ARG ask for extra args."
 (setq org-todo-keywords
       '((sequence "TODO" "|" "DONE" "CLOSED")))
 
+;; Org-capture
+(define-key global-map "\C-cc" 'org-capture)
+
+(setq org-capture-templates
+      '(("t" "General TODOs" entry (file+headline "~/todo.org" "General tasks")
+         "* TODO %?\n  %i")
+        ("m" "Milestone tracking tasks" entry (file+headline "~/todo.org" "Milestone tracking")
+         "* TODO %?\n  %i")
+        ("v" "Metadata validation tasks" entry (file+headline "~/todo.org" "Metadata validation")
+         "* TODO %?\n  %i")
+        ("c" "Culture committee tasks" entry (file+headline "~/todo.org" "Culture committee")
+         "* TODO %?\n  %i")))
+
 ;; Add smartparens options
 (sp-local-pair 'org-mode "~" "~")
 (sp-local-pair 'org-mode "/" "/")
@@ -765,8 +778,8 @@ With prefix ARG ask for extra args."
 (setq python-shell-interpreter "ipython"
       python-shell-interpreter-args "-i --simple-prompt")
 
-;; Use my anaconda environments for pyvenv
-(setenv "WORKON_HOME" "/Users/Kara/anaconda/envs")
+;; Environments for pyvenv
+(setenv "WORKON_HOME" "/Users/kwoo/")
 (pyvenv-mode 1)
 
 ;; Use Django-style docstrings
