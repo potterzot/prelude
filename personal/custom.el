@@ -224,6 +224,12 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Style
 (setq ess-default-style 'RStudio)
 
+;; Don't move comments (comment-dwim still moves them so this only sort of
+;; works)
+(defun my-ess-settings ()
+  (setq ess-indent-with-fancy-comments nil))
+(add-hook 'ess-mode-hook #'my-ess-settings)
+
 ;; Smartparens in R repl
 (add-hook 'ess-R-post-run-hook (lambda () (smartparens-mode 1)))
 (add-hook 'inferior-ess-mode-hook (lambda () (smartparens-mode 1)))
