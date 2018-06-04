@@ -779,7 +779,7 @@ With prefix ARG ask for extra args."
       python-shell-interpreter-args "-i --simple-prompt")
 
 ;; Environments for pyvenv
-(setenv "WORKON_HOME" "/Users/kwoo/")
+(setenv "WORKON_HOME" "/Users/kwoo/envs")
 (pyvenv-mode 1)
 
 ;; Use Django-style docstrings
