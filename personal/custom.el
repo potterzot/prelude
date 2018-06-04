@@ -285,6 +285,15 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 
 (global-set-key (kbd "C-x 9") 'R-scratch)
 
+(defun ess-r-shiny-run-app (&optional arg)
+  "Interface for `shiny::runApp()'.
+With prefix ARG ask for extra args."
+  (interactive)
+  (inferior-ess-r-force)
+  (ess-eval-linewise
+   "shiny::runApp(\".\")\n" "Running app" arg
+   '("" (read-string "Arguments: " "recompile = TRUE"))))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                            Google Translate                            ;;;;
