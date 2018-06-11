@@ -715,7 +715,7 @@ With prefix ARG ask for extra args."
    (lisp . t)
    (python . t)
    (R . t)
-   (sh . t)))
+   (shell . t)))
 
 ;; Quit asking if I want to evaluate the source blocks, I do
 (setq org-confirm-babel-evaluate nil)
