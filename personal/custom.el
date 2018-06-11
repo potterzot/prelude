@@ -235,7 +235,8 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 (add-hook 'inferior-ess-mode-hook (lambda () (smartparens-mode 1)))
 
 ;; Disable conversion of underscores to arrows; map to M-- instead
-(ess-toggle-underscore nil)
+(define-key ess-mode-map [?_] nil)
+(define-key inferior-ess-mode-map [?_] nil)
 (setq ess-S-assign-key (kbd "M--"))
 (add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
 
