@@ -768,6 +768,12 @@ With prefix ARG ask for extra args."
 ;;;;                       Python, Elpy, Pyvenv, EIN                        ;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Indentation
+(add-hook 'python-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode t)
+            (setq tab-width 4)
+            (setq python-indent 4)))
 
 ;; Use Elpy
 (package-initialize)
