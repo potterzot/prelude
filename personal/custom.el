@@ -237,8 +237,13 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Disable conversion of underscores to arrows; map to M-- instead
 (define-key ess-mode-map [?_] nil)
 (define-key inferior-ess-mode-map [?_] nil)
-(setq ess-S-assign-key (kbd "M--"))
-(add-hook 'ess-mode-hook (lambda () (ess-toggle-S-assign-key t)))
+(defun assign_key ()
+  "I don't understand why assignment operators in ESS are so confusing, guess I'll write my own."
+  (interactive)
+  (just-one-space 1)
+  (insert "<- "))
+(define-key ess-mode-map (kbd "M--") 'assign_key)
+(define-key inferior-ess-mode-map (kbd "M--") 'assign_key)
 
 ;; When wrapping long lists of function args, put the first on a new line
 (setq ess-fill-calls-newlines t)
@@ -767,10 +772,23 @@ With prefix ARG ask for extra args."
 ;; Export files with the same name as the main file
 (setq polymode-exporter-output-file-format "%s")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;                               Projectile                               ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq projectile-mode-line "Projectile")
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;                       Python, Elpy, Pyvenv, EIN                        ;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Indentation
+(add-hook 'python-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode t)
+            (setq tab-width 4)
+            (setq python-indent 4)))
 
 ;; Use Elpy
 (package-initialize)
@@ -810,6 +828,12 @@ With prefix ARG ask for extra args."
 ;; https://github.com/millejoh/emacs-ipython-notebook/issues/174
 (require 'ein-notebook)
 (define-key ein:notebook-mode-map (kbd "M-<return>") 'ein:worksheet-execute-cell-and-goto-next)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;                                  Tramp                                  ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq tramp-verbose 1)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
