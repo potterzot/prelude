@@ -21,7 +21,7 @@
  '(org-agenda-files (quote ("~/todo.org")))
  '(package-selected-packages
    (quote
-    (ws-butler flymake-json undo-tree uuid editorconfig zop-to-char zenburn-theme yaml-mode which-key wgrep volatile-highlights vkill twittering-mode smex smartrep smartparens smart-mode-line scss-mode rainbow-mode rainbow-delimiters polymode php-mode ox-pandoc ox-gfm ov org-ref operate-on-number mu4e-maildirs-extension move-text markdown-mode magit key-combo json-mode jabber imenu-anywhere helm-projectile helm-descbinds helm-ag guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist geiser flycheck flx-ido floobits expand-region exec-path-from-shell ess emoji-cheat-sheet-plus elpy elisp-slime-nav ein easy-kill discover-my-major diminish diff-hl csv-mode crux company-auctex company-anaconda color-theme-sanityinc-tomorrow cdlatex browse-kill-ring beacon anzu ace-window ac-emoji)))
+    (helm projectile ws-butler flymake-json uuid editorconfig zop-to-char zenburn-theme yaml-mode which-key wgrep volatile-highlights vkill twittering-mode smex smartrep smartparens smart-mode-line scss-mode rainbow-mode rainbow-delimiters polymode php-mode ox-pandoc ox-gfm ov org-ref operate-on-number mu4e-maildirs-extension move-text markdown-mode magit key-combo json-mode jabber imenu-anywhere helm-projectile helm-descbinds helm-ag guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist geiser flycheck flx-ido floobits expand-region exec-path-from-shell ess emoji-cheat-sheet-plus elpy elisp-slime-nav ein easy-kill discover-my-major diminish diff-hl csv-mode crux company-auctex company-anaconda color-theme-sanityinc-tomorrow cdlatex browse-kill-ring beacon anzu ace-window ac-emoji)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
@@ -55,15 +55,23 @@
 
 ;; Package repositories
 (require 'package)
-(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
-(add-to-list 'package-archives '("elpy" . "https://jorgenschaefer.github.io/packages/"))
 
-(prelude-require-packages '(color-theme-sanityinc-tomorrow
+;; (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+;; (add-to-list 'package-archives '("elpy" . "https://jorgenschaefer.github.io/packages/"))
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")
+                         ("org" . "https://orgmode.org/elpa/")
+                         ("elpy" . "https://jorgenschaefer.github.io/packages/")))
+
+
+(prelude-require-packages '(anzu
+                            color-theme-sanityinc-tomorrow
                             ein
                             emoji-cheat-sheet-plus
                             elpy
                             ess
                             floobits
+                            flymake-json
                             jabber
                             key-combo
                             markdown-mode
@@ -75,7 +83,10 @@
                             projectile
                             pyvenv
                             twittering-mode
-                            wgrep))
+                            undo-tree
+                            wgrep
+                            ws-butler))
+
 
 ;; Start up in fullscreen
 (add-to-list 'default-frame-alist '(fullscreen . fullscreen))
