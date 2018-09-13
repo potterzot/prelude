@@ -573,13 +573,13 @@ With prefix ARG ask for extra args."
 (setq org-capture-templates
       '(("t" "General TODOs" entry (file+headline "~/todo.org" "General tasks")
          "* TODO %?\n  %i")
-        ("m" "Milestone tracking tasks" entry (file+headline "~/todo.org" "Milestone tracking")
+        ("a" "AMP-AD tasks" entry (file+headline "~/todo.org" "AMP-AD")
          "* TODO %?\n  %i")
-        ("v" "Metadata validation tasks" entry (file+headline "~/todo.org" "Metadata validation")
+        ("p" "PsychENCODE tasks" entry (file+headline "~/todo.org" "PsychENCODE")
          "* TODO %?\n  %i")
         ("c" "Culture committee tasks" entry (file+headline "~/todo.org" "Culture committee")
          "* TODO %?\n  %i")
-        ("a" "Annotations tasks" entry (file+headline "~/todo.org" "Annotations")
+        ("m" "Annotations tasks" entry (file+headline "~/todo.org" "Annotations")
          "* TODO %?\n  %i")))
 
 ;; Add smartparens options
