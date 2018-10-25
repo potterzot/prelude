@@ -61,6 +61,10 @@
                             wgrep
                             ws-butler))
 
+;; Check if computer is my work computer
+(defun work-computer ()
+  (interactive)
+  (string-equal (system-name) "heimalandi.local"))
 
 ;; Start up in fullscreen
 (add-to-list 'default-frame-alist '(fullscreen . fullscreen))
@@ -570,6 +574,22 @@ With prefix ARG ask for extra args."
 (setq org-todo-keywords
       '((sequence "TODO" "|" "DONE" "CLOSED")))
 
+;; Org capture headers for work
+(define-key global-map "\C-cc" 'org-capture)
+
+(if (work-computer)
+    (setq org-capture-templates
+          '(("t" "General TODOs" entry (file+headline "~/todo.org" "General tasks")
+             "* TODO %?\n  %i")
+            ("a" "AMP-AD tasks" entry (file+headline "~/todo.org" "AMP-AD")
+             "* TODO %?\n  %i")
+            ("p" "PsychENCODE tasks" entry (file+headline "~/todo.org" "PsychENCODE")
+             "* TODO %?\n  %i")
+            ("c" "Culture committee tasks" entry (file+headline "~/todo.org" "Culture committee")
+             "* TODO %?\n  %i")
+            ("m" "Annotations tasks" entry (file+headline "~/todo.org" "Annotations")
+             "* TODO %?\n  %i"))))
+
 ;; Add smartparens options
 (sp-local-pair 'org-mode "~" "~")
 (sp-local-pair 'org-mode "/" "/")
@@ -771,8 +791,10 @@ With prefix ARG ask for extra args."
 (setq python-shell-interpreter "ipython"
       python-shell-interpreter-args "-i --simple-prompt")
 
-;; Use my anaconda environments for pyvenv
-(setenv "WORKON_HOME" "/Users/Kara/anaconda/envs")
+;; Python environments
+(if (work-computer)
+    (setenv "WORKON_HOME" "/Users/kwoo/envs")
+  setenv "WORKON_HOME" "/Users/Kara/anaconda/envs")
 (pyvenv-mode 1)
 
 ;; Use Django-style docstrings
