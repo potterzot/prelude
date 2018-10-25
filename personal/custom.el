@@ -239,6 +239,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Don't ask me for a directory on startup
 (setq ess-ask-for-ess-directory nil)
 
+;; Turn on tab completion
+(setq ess-tab-complete-in-script t)
+
 ;; Bind M-enter to ess-eval-region-or-line-and-step
 (define-key ess-mode-map (kbd "M-<return>") 'ess-eval-region-or-line-and-step)
 
