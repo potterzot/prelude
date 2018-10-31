@@ -246,8 +246,9 @@ sentence. Otherwise kill forward but preserve any punctuation at the sentence en
 ;; Turn on tab completion
 (setq ess-tab-complete-in-script t)
 
-;; Bind M-enter to ess-eval-region-or-line-and-step
-(define-key ess-mode-map (kbd "M-<return>") 'ess-eval-region-or-line-and-step)
+;; Bind M-enter to ess-eval-region-or-line-visibly-and-step
+(define-key ess-mode-map (kbd "M-<return>")
+  'ess-eval-region-or-line-visibly-and-step)
 
 ;; Use s-return to set directory to location of current file
 (add-hook 'ess-mode-hook
