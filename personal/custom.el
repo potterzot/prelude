@@ -591,6 +591,8 @@ With prefix ARG ask for extra args."
             ("c" "Culture committee tasks" entry (file+headline "~/todo.org" "Culture committee")
              "* TODO %?\n  %i")
             ("m" "Annotations tasks" entry (file+headline "~/todo.org" "Annotations")
+             "* TODO %?\n  %i")
+            ("w" "Schemas/metadata working group tasks" entry (file+headline "~/todo.org" "Schemas/metadata working group")
              "* TODO %?\n  %i"))))
 
 ;; Add smartparens options
