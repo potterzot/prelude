@@ -1,0 +1,19 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: icetest
+# key: icetest
+# binding: direct-keybinding
+# --
+####################${1:$(make-string (string-width yas-text) ?\#)}######
+####  Validate $1 data  ####
+####################${1:$(make-string (string-width yas-text) ?\#)}######
+
+library("devtools")
+library("icetest")
+
+data_horiz <- read.csv("../data-orig/$0",
+                       stringsAsFactors = FALSE)
+
+vdata <- t_icedata(data_horiz)
+
+source_url("https://raw.githubusercontent.com/karawoo/icetest/master/test_icedata.R",
+           echo = TRUE, max.deparse.length = 1e3)

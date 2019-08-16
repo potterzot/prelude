@@ -1,0 +1,14 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Homework header
+# key: hw
+# binding: direct-keybinding
+# --
+#+OPTIONS: toc:nil
+#+LaTeX_CLASS: hw
+#+TITLE: $1
+#+AUTHOR: Kara Woo
+#+DATE: $2
+#+LATEX_HEADER: \course{$3}
+#+LATEX_HEADER: \linespread{2}
+
+$0

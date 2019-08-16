@@ -39,6 +39,9 @@
 ;; You may delete these explanatory comments.
 ;(package-initialize)
 
+;; Fix this bug: https://github.com/bbatsov/prelude/issues/1225
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 (defvar current-user
   (getenv
    (if (equal system-type 'windows-nt) "USERNAME" "USER")))
